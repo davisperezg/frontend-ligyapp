@@ -9,6 +9,9 @@ import "react-toastify/dist/ReactToastify.css";
 import ModuleScreen from "../views/Modules/ModuleScreen";
 import NotFoundScreen from "../views/NotFound/NotFoundScreen";
 import PermissionsScreen from "../views/Permissions/PermissionsScreen";
+import ProfileScreen from "../views/Profile/ProfileScreen";
+import ClubScreen from "../views/Club/ClubScreen";
+import CategoryScreen from "../views/Category/CategoryScreen";
 
 export const DashboardRoutes = () => {
   return (
@@ -33,6 +36,18 @@ export const DashboardRoutes = () => {
           <Route
             path="/module/:idModule/menu/:idMenu/permisos"
             element={<PermissionsScreen />}
+          />
+          <Route
+            path="/module/:idModule/menu/:idMenu/categorias"
+            element={<CategoryScreen />}
+          />
+          <Route
+            path="/module/:idModule/menu/:idMenu/clubs"
+            element={<ClubScreen />}
+          />
+          <Route
+            path="/module/:idModule/menu/:idMenu/perfiles"
+            element={<ProfileScreen />}
           />
         </Routes>
         <ToastContainer />
